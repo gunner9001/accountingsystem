@@ -1,0 +1,140 @@
+﻿
+//FIX THE MONEY LEAVING PROBLEM AS IT DOES NOT PERFORM PROPERLY
+
+@using MySql.Data.MySqlClient
+<!DOCTYPE html>
+<html>
+<head>
+    <title>accounting system</title>
+</head>
+<body background="https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/itCjTBE/light-blue-tech-geometric-polygonal-motion-background-video-corporate-animation-hd-1920x1080_nde0ffkig__F0000.png">
+
+    <center><h1>money spent monthly</h1></center>
+    @{
+
+        List<int> Val = new List<int>();
+        int j = 0;
+        int ValueMan = 0;
+        while (j < 100)
+        {
+
+
+            MySqlConnection Connectman = new MySqlConnection("server=localhost;user id=root;persistsecurityinfo=True;database=restuarantdata;password=loler9001");
+            Connectman.Open();
+            MySqlCommand Get = new MySqlCommand("select Amount from accountsystem_moneyinfo where ID= '"+ j +"'", Connectman);
+            var Checker = Get.ExecuteScalar();
+            Connectman.Close();
+
+            if (Checker != null)
+            {
+                string GoodManArsh = Convert.ToString(Checker);
+                int IntMan = Convert.ToInt32(GoodManArsh);
+
+                Val.Add(IntMan);
+            }
+
+            j = j + 1;
+        }
+
+        foreach (int bob in Val)
+        {
+            ValueMan = ValueMan + bob;
+
+        }
+        MySqlConnection Connectman2 = new MySqlConnection("server=localhost;user id=root;persistsecurityinfo=True;database=restuarantdata;password=loler9001");
+        Connectman2.Open();
+        MySqlCommand Get2 = new MySqlCommand("UPDATE `restuarantdata`.`accountsystem_currentmoney` SET `Current` = '"+ ValueMan +"' WHERE (`ID` = '1')", Connectman2);
+        Get2.ExecuteNonQuery();
+        Connectman2.Close();
+    }
+
+    @{
+        Random exampleprogram = new Random();
+        int bobwowlongnumber = exampleprogram.Next();
+        MySqlConnection herewego = new MySqlConnection("server=localhost;user id=root;persistsecurityinfo=True;database=restuarantdata;password=loler9001");
+        herewego.Open();
+        MySqlCommand cake = new MySqlCommand("UPDATE `restuarantdata`.`accountsystem_passwordattempts` SET `PasswordAttempts` = '" + bobwowlongnumber + "' WHERE (`ID` = '2');", herewego);
+        cake.ExecuteNonQuery();
+        herewego.Close();
+        //============================
+
+        for (int i = 0; i < 100; i++)
+        {
+
+            MySqlConnection arshfatman = new MySqlConnection("server=localhost;user id=root;persistsecurityinfo=True;database=restuarantdata;password=loler9001");
+            arshfatman.Open();
+            MySqlCommand Cheeeck = new MySqlCommand("select ID from accountsystem_moneyinfo where ID=" + i + "", arshfatman);
+            var Ckesdf = Cheeeck.ExecuteScalar();
+            if (Ckesdf != null)
+            {
+                <div>------------------------------------------------------------------------------------------------</div>
+                MySqlCommand DUdr = new MySqlCommand("select ID from accountsystem_moneyinfo where ID=" + i + "", arshfatman);
+
+                var Fatarshman = DUdr.ExecuteScalar();
+                string FatBoyArsh = Convert.ToString(Fatarshman);
+                <h3>ID: @FatBoyArsh</h3>
+                MySqlCommand Date = new MySqlCommand("select Date from accountsystem_moneyinfo where ID=" + i + "", arshfatman);
+                var Dang = Date.ExecuteScalar();
+                string DangDud = Convert.ToString(Dang);
+                <h3>Date When Issued: @DangDud</h3>
+                MySqlCommand DNOs = new MySqlCommand("select What from accountsystem_moneyinfo where ID=" + i + "", arshfatman);
+                var Dango = DNOs.ExecuteScalar();
+                string DangDudo = Convert.ToString(Dango);
+                <h3>What: @DangDudo</h3>
+                MySqlCommand Fatmanarshissofatlikereallyfatitsinsane = new MySqlCommand("select Wheres from accountsystem_moneyinfo where ID=" + i + "", arshfatman);
+                var wowthatslong = Fatmanarshissofatlikereallyfatitsinsane.ExecuteScalar();
+                string sureitwas = Convert.ToString(wowthatslong);
+                <h3>Location: @sureitwas</h3>
+                MySqlCommand Ammosu = new MySqlCommand("select Amount from accountsystem_moneyinfo where ID=" + i + "", arshfatman);
+                var dfhajfadf = Ammosu.ExecuteScalar();
+                string obbobo = Convert.ToString(dfhajfadf);
+                <h3>Amount: $@obbobo </h3>
+            }
+            else
+            {
+
+
+            }
+
+
+
+            arshfatman.Close();
+        }
+
+        MySqlConnection connectingjapan = new MySqlConnection("server=localhost;user id=root;persistsecurityinfo=True;database=restuarantdata;password=loler9001");
+        connectingjapan.Open();
+        MySqlCommand Fatmanandlittleboy = new MySqlCommand("select Current from accountsystem_currentmoney where ID=1", connectingjapan);
+        var Namesmandude = Fatmanandlittleboy.ExecuteScalar();
+        string stringdudeboyidk = Convert.ToString(Namesmandude);
+        <center><h2>Money Left: $@stringdudeboyidk</h2></center>
+        connectingjapan.Close();
+    }
+    <h1>_______________________________________________________________________________________________</h1>
+
+
+    @{
+        MySqlConnection HeLetftowun = new MySqlConnection("server=localhost;user id=root;persistsecurityinfo=True;database=restuarantdata;password=loler9001");
+        HeLetftowun.Open();
+        MySqlCommand Findhim = new MySqlCommand("select PasswordAttempts from accountsystem_passwordattempts where ID=2", HeLetftowun);
+        var blahab = Findhim.ExecuteScalar();
+        string blob = Convert.ToString(blahab);
+        HeLetftowun.Close();
+
+        <center>
+            <form action="/Money/MoneyPage/@blob">
+                <h1>  <input type="submit" value="Add Data" name="submit" /></h1>
+            </form>
+        </center>
+        <form action="/Delete/@blob/@blob">
+            <input type="submit" value="Delete Data" />
+
+        </form>
+
+    }
+
+
+
+
+
+</body>
+</html>

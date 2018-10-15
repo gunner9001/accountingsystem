@@ -1,0 +1,44 @@
+﻿@using MySql.Data.MySqlClient
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+    <form method="post">
+    <select name="IDValue">
+        @{ 
+            List<int> Val = new List<int>();
+            int j = 0;
+            while (j < 100)
+            {
+
+
+                MySqlConnection Connectman = new MySqlConnection("server=localhost;user id=root;persistsecurityinfo=True;database=restuarantdata;password=loler9001");
+                Connectman.Open();
+                MySqlCommand Get = new MySqlCommand("select ID from accountsystem_moneyinfo where ID=" + j + "", Connectman);
+                var Checker = Get.ExecuteScalar();
+                Connectman.Close();
+              
+                if(Checker != null)
+                {
+                    Val.Add(j);
+                }
+
+                j = j + 1;
+            }
+            foreach(int bob in Val)
+            {
+                <option   value="@bob" >@bob</option>
+
+            }
+        }
+
+
+
+    </select>
+        <input type="submit" />
+        </form>
+
+   
+</body>
+</html>

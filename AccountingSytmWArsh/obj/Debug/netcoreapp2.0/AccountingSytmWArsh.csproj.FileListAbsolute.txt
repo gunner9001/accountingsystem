@@ -1,0 +1,11 @@
+C:\Users\daani\Documents\repos\websiteStuff\AccountingSytmWArsh\AccountingSytmWArsh\bin\Debug\netcoreapp2.0\AccountingSytmWArsh.deps.json
+C:\Users\daani\Documents\repos\websiteStuff\AccountingSytmWArsh\AccountingSytmWArsh\bin\Debug\netcoreapp2.0\AccountingSytmWArsh.runtimeconfig.json
+C:\Users\daani\Documents\repos\websiteStuff\AccountingSytmWArsh\AccountingSytmWArsh\bin\Debug\netcoreapp2.0\AccountingSytmWArsh.runtimeconfig.dev.json
+C:\Users\daani\Documents\repos\websiteStuff\AccountingSytmWArsh\AccountingSytmWArsh\bin\Debug\netcoreapp2.0\AccountingSytmWArsh.dll
+C:\Users\daani\Documents\repos\websiteStuff\AccountingSytmWArsh\AccountingSytmWArsh\obj\Debug\netcoreapp2.0\AccountingSytmWArsh.csprojAssemblyReference.cache
+C:\Users\daani\Documents\repos\websiteStuff\AccountingSytmWArsh\AccountingSytmWArsh\obj\Debug\netcoreapp2.0\AccountingSytmWArsh.csproj.CoreCompileInputs.cache
+C:\Users\daani\Documents\repos\websiteStuff\AccountingSytmWArsh\AccountingSytmWArsh\obj\Debug\netcoreapp2.0\AccountingSytmWArsh.AssemblyInfoInputs.cache
+C:\Users\daani\Documents\repos\websiteStuff\AccountingSytmWArsh\AccountingSytmWArsh\obj\Debug\netcoreapp2.0\AccountingSytmWArsh.AssemblyInfo.cs
+C:\Users\daani\Documents\repos\websiteStuff\AccountingSytmWArsh\AccountingSytmWArsh\bin\Debug\netcoreapp2.0\AccountingSytmWArsh.pdb
+C:\Users\daani\Documents\repos\websiteStuff\AccountingSytmWArsh\AccountingSytmWArsh\obj\Debug\netcoreapp2.0\AccountingSytmWArsh.dll
+C:\Users\daani\Documents\repos\websiteStuff\AccountingSytmWArsh\AccountingSytmWArsh\obj\Debug\netcoreapp2.0\AccountingSytmWArsh.pdb
